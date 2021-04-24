@@ -12,7 +12,11 @@ const Home: React.FC<{
 
 // eslint-disable-next-line @typescript-eslint/ban-ts-comment
 // @ts-ignore
-Home.getInitialProps = async ({ req }: { req: { __NEXT_INIT_QUERY: any } }) => {
+export const getServerSideProps = async ({
+  req,
+}: {
+  req: { __NEXT_INIT_QUERY: any };
+}) => {
   const body = req?.__NEXT_INIT_QUERY;
 
   let response;
@@ -28,10 +32,10 @@ Home.getInitialProps = async ({ req }: { req: { __NEXT_INIT_QUERY: any } }) => {
       },
     ).then((res) => res.json());
   } catch (error) {
-    return { data: { error }, req: body };
+    return { props: { data: { error }, req: body } };
   }
 
-  return { data: response, req: body };
+  return { props: { data: response, req: body } };
 };
 
 export default Home;
