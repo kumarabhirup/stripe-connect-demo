@@ -1,26 +1,6 @@
 import React from 'react';
-import {
-  AppBar,
-  Box,
-  Divider,
-  IconButton,
-  Link,
-  Toolbar,
-} from '@material-ui/core';
-import Spacer from './Spacer';
-import ExternalLink from './ExternalLink';
-import NextLink from 'next/link';
-import { Bold } from './StyleUtils';
+import { Box } from '@material-ui/core';
 import styled from 'styled-components';
-import GitHubIcon from '@material-ui/icons/GitHub';
-import TwitterIcon from '@material-ui/icons/Twitter';
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-
-const TitleLink = styled(Link)`
-  &:hover {
-    text-decoration: none;
-  }
-`;
 
 const MainContent = styled.main`
   flex: 1;
