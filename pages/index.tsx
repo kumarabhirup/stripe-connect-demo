@@ -10,8 +10,6 @@ const Home: React.FC<{
   return <HomeView data={props} />;
 };
 
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
 export const getServerSideProps = async ({
   req,
 }: {
