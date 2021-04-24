@@ -17,6 +17,10 @@ export const getServerSideProps = async ({
 }) => {
   const body = req?.__NEXT_INIT_QUERY;
 
+  if (!body?.code) {
+    return { props: { data: null, req: body } };
+  }
+
   let response;
   try {
     response = await fetch(

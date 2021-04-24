@@ -45,7 +45,9 @@ const handler: NextApiHandler = async (req, res) => {
           !accountAnalysis?.hasCompletedProcess ||
           !accountAnalysis?.displayName);
 
-      res.status(200).json({ account, oauth: result, accountAnalysis, shouldAllowUnlink });
+      res
+        .status(200)
+        .json({ account, oauth: result, accountAnalysis, shouldAllowUnlink });
       break;
 
     default:

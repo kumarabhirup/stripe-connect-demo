@@ -6,7 +6,7 @@
     "dev": "next dev -p 3001",
     "build": "next build",
     "start": "next start -p 3001",
-    "lint": "eslint --fix --max-warnings 0 --ext .js,.jsx,.ts,.tsx .",
+    "lint": "eslint --fix --max-warnings 10 --ext .js,.jsx,.ts,.tsx .",
     "typecheck": "tsc --noEmit"
   },
   "dependencies": {
